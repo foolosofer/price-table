@@ -1,0 +1,169 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+    Code starts here
+*/
+
+html {
+    /* disables text selection highlighting */
+
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+body {
+    display: flex;
+    background-color: rgba(84,159,254,255);
+    color: #016ff9;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.panel {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 25px;
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* align-items: center; */
+    text-transform: uppercase;
+}
+
+.pricing-img {
+    margin-bottom: 25px;
+    max-width: 100%;
+}
+
+.pricing-header {
+    color: grey;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-bottom: 50px;
+}
+
+.pricing-header, .pricing-plan, .pricing-features-item {
+    border-bottom: 1px solid #e1f1ff;
+}
+
+.pricing-plan:last-child {
+    border: none;
+}
+
+.pricing-features {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pricing-features-item {
+    font-weight: 600;
+    font-size: 0.8em;
+    line-height: 1.5;
+    padding: 15px;
+}
+
+.pricing-price {
+    display: block;
+    font-size: 2em;
+    font-weight: 800;
+}
+
+.pricing-button {
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #9dd1ff;
+    color: #016ff9;
+    border-radius: 8px;
+    padding: 15px 35px;
+    margin: 30px;
+    transition: background-color 200ms ease-in-out;
+}
+
+.pricing-button:hover, .pricing-button:active {
+    background-color: #e1f1ff;
+}
+
+.pricing-button.is-featured {
+    background-color: #48aaff;
+    color: white;
+}
+
+.pricing-button.is-featured:hover, .pricing-button.is-featured:active {
+    background-color: #269aff;
+}
+
+@media (max-width: 810px) {
+    .panel {
+        border-radius: 0;
+    }
+}
+
+@media (min-width: 900px) {
+    .panel {
+        flex-direction: row;
+    }
+
+    .pricing-plan {
+        padding: 25px 50px;
+        border-right: 1px solid #e1f1ff;
+        border-bottom: 0;
+        text-align: center;
+    }
+}
